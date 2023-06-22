@@ -1,6 +1,9 @@
 
 export class Pokemon {
 
+    get imageUrl(): string {
+        return `https://pokemon.com/${ this.id }.jpg`;
+    }
 
     constructor(
         public readonly id: number, 
@@ -9,7 +12,13 @@ export class Pokemon {
 
     ) {}
 
- 
+    scream() {
+        console.log(`${ this.name.toUpperCase() }!!!`);
+    }
+
+    speak() {
+        console.log(`${ this.name }, ${ this.name }`);
+    }   
 
 }
 
